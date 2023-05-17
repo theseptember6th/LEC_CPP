@@ -13,7 +13,7 @@ class student{
         cin>>percentage;
     }
     void display(){
-        cout<<name;
+        cout<<name<<"\n";
         cout<<percentage;
     }  
 };
