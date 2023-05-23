@@ -16,4 +16,5 @@ int main()
     sum=sum+marks[i];
    }
    cout<<"the total marks is"<<sum;
-}
+}      
+//THE END
