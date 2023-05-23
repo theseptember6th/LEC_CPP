@@ -4,7 +4,7 @@ int main()
 {
     int marks[7];
     int i;
-    for(i=0;i<6;i++)
+    for(i=0;i<sizeof(marks)/sizeof(marks[0]);i++)
     {
         cout<<"enter the marks for subject"<<i<<"\n";
         cin>>marks[i];
