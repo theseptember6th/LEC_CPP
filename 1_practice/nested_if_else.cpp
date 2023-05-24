@@ -32,6 +32,6 @@ int main()
         // }
     }
 
-    b>c ? cout<<"\n"<<b<<" is greater than" <<a : cout<<"\n"<<c<<" is greater than "<<c;
+  
     
 }
