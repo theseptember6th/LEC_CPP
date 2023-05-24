@@ -18,4 +18,4 @@ int main()
    }
    cout<<"the total marks is "<<sum;
 }      
-//THE END
+//THE END 
