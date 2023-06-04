@@ -9,7 +9,6 @@ class student{
         marks=x;
     }
 };
-
 void CalculateAverage(student s1,student s2)
 {
     double average;
@@ -24,5 +23,7 @@ int main()
     return 0;
 
 }
+
+
 
 
