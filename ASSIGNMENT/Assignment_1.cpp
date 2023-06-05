@@ -45,18 +45,24 @@ class COMPLEX{
 
 };
 
-// NON MEMBER FUNCTION 1
+// CONVERTING NON MEMBER FUNCTION 1 TO MEMBER FUNCTION
 
 void COMPLEX::multiply(COMPLEX A,COMPLEX B){
        real=(A.real*B.real)-(A.img*B.img);
        img=(A.real*B.img)+(A.img*B.real);
 }
-// NON MEMBER FUNCTION 2
+//CONVERTING NON MEMBER FUNCTION 2 TO MEMBER FUNCTION
 void COMPLEX::getdata(){
     cout<<"enter the real part of the complex numnber: ";
     cin>>real;
     cout<<"enter the imaginary part of the complex number; ";
     cin>>img;
+}
+
+// NON-MEMBER FUNCTION
+
+void meme(){
+    cout<<"hello how are you, I am under the water\n";
 }
 
 
@@ -91,6 +97,8 @@ int main(){
     c4.display();
     cout<<" = ";
     c5.display();
+    cout<<"\n";
+    meme();
 
     return 0;
 }
