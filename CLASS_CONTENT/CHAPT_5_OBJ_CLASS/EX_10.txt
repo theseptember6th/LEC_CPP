@@ -1,9 +1,14 @@
-/*PROPERTIES OF FRIEND FUNCTION:
+PROPERTIES OF FRIEND FUNCTION:
+
  - It is not in the scope of the class within which it has been declared as friend.
     since it is not in scope..we cannot call this function using object of that class.It can
     be invoked like normal C++ functions without using object.
+
+
  -Unlike member functions ,it cannot access member name directly and has to use an object
-   name and dot operator with each member name. eg object.membername;   
+   name and dot operator with each member name. eg object.membername;  
+   
+    
 -it can be declared as private or public part of the class.the meaning is same
 -normally,it takes objects as arguments.
-*/
+
