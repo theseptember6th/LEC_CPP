@@ -18,7 +18,7 @@ class KRISTAL{
    //destructor cant have return type and arguments
    ~KRISTAL(){
     destructors++;
-    cout<<"\ndue to termination of program or either end of object destructor is called "<<destructors+1<<" time";
+    cout<<"\ndue to termination of program or either end of object, destructor is called "<<destructors+1<<" time";
    }
 
 };
