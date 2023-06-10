@@ -56,7 +56,7 @@ int main(){
             CalculateArea(lengths,breadths);
             break;
 
-            Default:
+            default:
             cout<<"\nINVALID DIGIT";
             exit(-1);
 
