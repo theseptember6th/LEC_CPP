@@ -92,11 +92,9 @@ void player1Move()  // input ma X place gardene
    do
    {
       printf("1st player turn\n");
-      printf("Enter row #(1-3): ");
-      scanf("%d", &x);
+      printf("Enter row #(1-3)&column #(1-3): ");
+      scanf("%d %d", &x,&y);
       x=x-1;  // because array starts with 0 so  -1
-      printf("Enter column #(1-3): ");
-      scanf("%d", &y);
       y=y-1; // because array starts with 0 so  -1
 
       if(board[x][y] != ' ') { // edi tyo thau ma vareko rahexa vane..invalid print gardene
@@ -121,11 +119,9 @@ void player2Move()  // same as player one...player 2 ko input ma chai 0 place ga
    do
    {
       printf("second player turn\n");
-      printf("Enter row #(1-3): ");
-      scanf("%d", &x);
+      printf("Enter row #(1-3)&column #(1-3): ");
+      scanf("%d %d", &x,&y);
       x=x-1;
-      printf("Enter column #(1-3): ");
-      scanf("%d", &y);
       y=y-1;
 
       if(board[x][y] != ' ')
