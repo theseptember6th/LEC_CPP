@@ -9,7 +9,7 @@ namespace outer{
     cout<<num;              // but cout available if i make function
     }
     namespace inner{
-        //num=10;              // this is error why?
+        //num=10;              // outer ko num acess garna mildaina raixa!!
         int num =10;              // forced to do this
         //cout<<num;
         void display(){
