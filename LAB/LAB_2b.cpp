@@ -11,9 +11,9 @@ void swapnumbers(int &a,int &b){
     b=temp;
 }
 
-void display(int num1,int num2)
+void display(int &nump1,int &nump2)
 {
-    cout<<"the value of num1 is "<<num1<<" and value of num2 is "<<num2;
+    cout<<"the value of num1 is "<<nump1<<" and value of num2 is "<<nump2;
 }
 int main(){
     int num1,num2;
@@ -21,7 +21,5 @@ int main(){
     cin>>num1>>num2;
     swapnumbers(num1,num2);
     display(num1,num2);
-    
-
     return 0;
 }
