@@ -13,7 +13,7 @@ class parents{
   int y;
   public:
   int z;
-      
+
 };
 
 class child:public parents{

@@ -72,8 +72,9 @@ int main(){
 
 saja_yatayat.accelerator_pedal();//PROPERTY OF INHERITANCE child can access property of its parent
 
-  duke.size; /* *error even child class cannot acess parents private data
+  duke.size=100; /* *error even child class cannot acess parents private data
               INHERITANCE + ENCAPSULATION PROPERTY*/
+  duke.fuel=10;  // no error ..child can acess parents public data  INHERITANCE PROPERTY
 
   duke.vehicle_check(); /*CODE REUSABILITY PROPERTY you dont have to write checking vehicle code
                            again and again..vehicle is tested saving time and effort*/
