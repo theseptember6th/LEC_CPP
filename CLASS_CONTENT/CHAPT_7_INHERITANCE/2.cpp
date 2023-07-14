@@ -17,4 +17,5 @@ int main()
 {
     Derived d;
     d.message();
+    return 0;
 }

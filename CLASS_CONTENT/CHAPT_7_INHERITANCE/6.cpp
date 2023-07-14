@@ -20,4 +20,5 @@ class Derived : public Base{
 int main()
 {
     Derived d(5);
+    return 0;
 }

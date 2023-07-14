@@ -18,7 +18,7 @@ class student{
         cout<<"\n NAME: "<<name;
       }
 };
-class InternalExam: virtual public student{
+class InternalExam:virtual public student{
     protected:
       int marks1,marks2,marks3;
     public:
@@ -71,7 +71,7 @@ int main(){
   result r;
   cout<<"Enter the data for student\n";
   r.getsdata();
-  cout<<"\n Enter marks";
+  cout<<"\n Enter marks\n";
   r.getdata();
   cout<<"\n Data for the student is:\n";
   r.showdata();

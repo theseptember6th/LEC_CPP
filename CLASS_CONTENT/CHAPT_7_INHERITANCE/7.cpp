@@ -11,12 +11,12 @@ class Base
 };
 class Derived:public Base{
     public:
-    Derived(int data): Base(data)
-    {
+    Derived(int data): Base(data){
         cout<<"Parameterized constructor from derived class";
     }
 };
 int main()
 {
     Derived d(5);
+    return 0;
 }
