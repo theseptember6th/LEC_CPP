@@ -1,0 +1,1 @@
+cout<<"\n the percentage is "<<(sum/((sizeof(sub)/sizeof(sub[0]))*100))*100<<"%\n";
