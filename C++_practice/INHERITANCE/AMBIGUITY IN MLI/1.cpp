@@ -1,34 +1,31 @@
-// Ambiguity in multiple level inheritance
-
-
 #include<iostream>
 using std::cin;
 using std::cout;
 
-class base1{
-    public:
-    void display(){
-        cout<<"display 1\n";
-    }
-
+class grandparent{
+     public:
+     void showdata(){
+        cout<<"hello";
+     }
 
 };
-class base2{
-    public:
-    void display(){
-        cout<<"display 2\n";
-    }
+class parent1:virtual public grandparent{
+     
 };
-class derived:public base1,public base2{
-    public:
-    void output(){
-        //display(); //error
-        base1::display();
-        base2::display();
-    }
+class parent2:virtual public grandparent{
+ 
+};
+class child:public parent1,public parent2{
+       public:
+       void showchdata(){
+        //showdata(); //ambigious
+           showdata();
+           parent1::showdata();
+       }
 };
 int main(){
-  derived d1;
-  d1.output();
+    child c1;
+    c1.showdata();
+    c1.showchdata();
 return 0;
 }
