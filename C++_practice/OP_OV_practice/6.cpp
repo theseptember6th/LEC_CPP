@@ -1,5 +1,5 @@
-//PREFIX
-//member function YES return using this pointer
+//POSTFIX
+//member function YES return  using the constructor
 #include<iostream>
 using std::cin;
 using std::cout;
@@ -10,19 +10,22 @@ class test{
     test(){
         count=0;
     } 
+    test(int n){
+        count=n;
+    }
     void display(){
         cout<<count;
     }
-    test operator ++(){
-        ++count;
-        return *this;
+    test operator ++(int){
+        return test(count++);
+        
     }
 
 };
 int main(){
-    test c1,c2;
-    c2=++c1;
-    c2.display();
+    test c1;
+    c1++;
+    c1.display();
    
 return 0;
 }

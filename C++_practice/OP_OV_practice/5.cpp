@@ -23,9 +23,9 @@ class test{
 
 };
 int main(){
-    test c1;
-    c1++;
-    c1.display();
+    test c1,c2;
+    c2=c1++;
+    c2.display();
    
 return 0;
 }
