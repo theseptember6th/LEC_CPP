@@ -7,6 +7,11 @@ class time{
     int sec;
     int min;
     public:
+    time(){
+        hr=0;
+        sec=0;
+        min=0;
+    }
     time(int x ,int y, int z){
         hr=x;
         sec=y;
@@ -14,6 +19,7 @@ class time{
     }
 
     friend ostream& operator <<(ostream&,time&);
+    friend istream& operator >>(istream&,time&);
  
 
 };
@@ -22,8 +28,13 @@ class time{
      a<<t.hr<<":"<<t.min<<":"<<t.sec;
      return a;
  }
+ istream& operator >>(istream&a,time&t){
+    a>>t.hr>>t.min>>t.sec;
+    return a;
+ }
 int main(){
-  time t1(2,3,4);
+  time t1;
+  cin>>t1;
   cout<<t1;
 return 0;
 }
