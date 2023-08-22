@@ -1,4 +1,4 @@
-// one argument template
+//   template
 #include<iostream>
 using std::cin;
 using std::cout;
