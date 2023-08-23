@@ -13,7 +13,7 @@ class Array{
     T fmax();
     T fmin();
 };
-template<class T>
+template<class T>   //need to mention everytime
 T Array<T>::fmax(){
     T max;
     max=arr[0];
@@ -24,7 +24,7 @@ T Array<T>::fmax(){
     }
     return max;
 }
-template<class T>
+template<class T>    //need to mention everytime
 T Array<T>::fmin(){
     T min;
     min=arr[0];
