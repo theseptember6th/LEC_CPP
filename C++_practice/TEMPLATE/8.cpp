@@ -26,7 +26,7 @@ class stack{
 
 };
 int main(){
-    stack<int>s1;
+    stack<int>s1;                     //for integer stack problem
     s1.push(11);
     s1.push(22);
     s1.push(33);
@@ -35,7 +35,7 @@ int main(){
     cout<<"\nNumber popped:  "<<s1.pop();
     cout<<"\nNumber popped:  "<<s1.pop();
 
-    stack<char>s2;
+    stack<char>s2;                           //for character stack problem
     s2.push('A');
     s2.push('B');
     s2.push('C');
@@ -43,5 +43,14 @@ int main(){
     cout<<"\nCharacter popped:  "<<s2.pop();
     cout<<"\ncharacter popped:  "<<s2.pop();
     cout<<"\ncharacter popped:  "<<s2.pop();
+
+    stack<char*>s3;                           //for string stack problem
+    s3.push("Kristal");
+    s3.push("Shrestha");
+    s3.push("HI!");
+     cout<<"size: "<<s2.size();
+    cout<<"\nstring popped:  "<<s3.pop();
+    cout<<"\nstring popped:  "<<s3.pop();
+    cout<<"\nstring popped:  "<<s3.pop();
 return 0;
 }
