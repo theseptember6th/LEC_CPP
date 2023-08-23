@@ -34,6 +34,9 @@ int main(){
     char a='a';
     char b='z';
     cout<<" "<<fmax(a,b);
-
+    //cout<<" "<<fmax(x,a); //error ,ambiguous (no standard conversion)
+    cout<<" "<<fmax<int>(a,y);//so done in explicit conversion
+    cout<<" "<<fmax<char>(y,a);
+    //cout<<" "<<fmax(x,b)<int>;//error paxadi ko explicit conversion late vayo..ani hudaina
 return 0;
 }
