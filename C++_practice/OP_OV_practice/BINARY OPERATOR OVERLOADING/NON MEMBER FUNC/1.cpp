@@ -30,16 +30,20 @@ class complex{
  }
 
 };
-// complex operator +(complex&a,complex&b){
-//     complex temp;
-//     temp.return_real=a.return_real+b.return_real;
-//     temp.return_imag=a.return_imag+b.return_imag;         
-//     return temp;
-//  }
+ complex operator +(complex&a,complex&b){
+     complex temp;
+        float c;
+        float d;
+     c=a.return_real()+b.return_real();
+     d=a.return_imag()+b.return_imag();         
+    
+     return temp(c,d);
+
+  }
 int main(){
-  complex c1(1,2),c2(2,3);
-  //c1+c2;   //c1.operator+(c2)
-  c1.display();
+  complex c1(1,2),c2(2,3),c3;
+  c3=c1+c2;   
+  c3.display();
 return 0;
 }
 //code doesnt work
