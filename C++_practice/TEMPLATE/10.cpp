@@ -1,5 +1,5 @@
 // defining member function of class template outside the class + non template argument
-// by the example of array maxm and minm problem
+// by the example of array maxm and minm problem           .
 
 #include<iostream>
 using std::cin;
