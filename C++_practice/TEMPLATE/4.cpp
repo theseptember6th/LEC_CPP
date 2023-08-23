@@ -38,5 +38,7 @@ int main(){
     cout<<" "<<fmax<int>(a,y);//so done in explicit conversion
     cout<<" "<<fmax<char>(y,a);
     //cout<<" "<<fmax(x,b)<int>;//error paxadi ko explicit conversion late vayo..ani hudaina
+    char str1[]="kristal",str2[]="shrestha";
+    cout<<" "<<fmax(str1,str2);
 return 0;
 }
