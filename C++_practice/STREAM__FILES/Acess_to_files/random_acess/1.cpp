@@ -43,7 +43,7 @@ void readonerec(){
     infile.open("kristal.dat",ios::binary);
     cout<<"enter record number\n";
     cin>>n;
-    infile.seekg(n*sizeof(s1));
+    infile.seekg((n-1)*sizeof(s1));
     infile.read(reinterpret_cast<char*>(&s1),sizeof(s1));
     s1.display();
 
