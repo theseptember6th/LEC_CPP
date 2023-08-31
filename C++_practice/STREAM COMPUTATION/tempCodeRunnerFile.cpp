@@ -1,4 +1,2 @@
-cout.setf(ios::left,ios::adjustfield);        
-//    cout.width(6);
-//    cout.fill('#');
-//    cout<<x<<"\n";
+ cout<<2357<<','<<hex<<2357<<','<<oct<<2357<<"\n";
+//   cout<<setw(5)<<setfill('#')<<37<<"\n";
