@@ -56,6 +56,31 @@ int main(){
   cout<<"\n  ENTER 2---> TO READ ALL RECORDS FROM FILE   ";
   cout<<"\n  ENTER 1---> TO READ 1 RECORD FROM FILE   ";
   cout<<"\n  ENTER 1---> TO EXIT   ";
+     
+   while(true){
+    cout<<"\nenter the choice: ";
+    cin>>choice;
 
+      switch(choice){
+        case 1:
+          write2file();
+          break;
+
+        case 2:
+        readfromfile();
+        break;
+
+        case 3:
+        readonerec();
+        break;
+
+        case 4:
+        exit(0);
+
+        default:
+        cout<<"invalid digit\n";
+        exit(0);  
+      }
+   }
 return 0;
 }
