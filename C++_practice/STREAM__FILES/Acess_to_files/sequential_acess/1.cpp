@@ -49,7 +49,7 @@ int main(){
 
 
       while(true){
-        cout<<"\n enter your choice;"
+        cout<<"\n enter your choice";
         cin>>choice;
         
 
