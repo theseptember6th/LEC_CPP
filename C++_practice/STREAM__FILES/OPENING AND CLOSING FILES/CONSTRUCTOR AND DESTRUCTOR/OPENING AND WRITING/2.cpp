@@ -10,6 +10,6 @@ int main(){
    infile>>name;
    infile>>email;
    cout<<"data in my files are\n";
-   cout<<name<<email;
+   cout<<name<<email;  
 return 0;
 }
