@@ -42,13 +42,47 @@ class student{
         cout<<"\nthere are "<<count<<"records in this file";
         cout<<"\n enter the record number: ";
         cin>>n;
-        infile.seekg((n-1))
-
-
+        infile.seekg((n-1)*sizeof(*this));
+        infile.read(reinterpret_cast<char*>(this),sizeof(*this));
+        display();
     }
 };
 
 int main(){
+   student s1;
+   int choice;
+   cout<<"\n       STUDENT RECORD SYSTEM         ";
+   cout<<"\n Enter 1 ---->to write to the file   ";
+   cout<<"\n Enter 2 ---->to read from the file   ";
+   cout<<"\n Enter 1 ---->to read specific record   ";
+   cout<<"\n Enter 1 ---->to exit the program  ";
 
+
+   while(true){
+      cout<<"\n enter the choice";
+      cin>>choice;
+
+      switch(choice){
+        case 1:
+          s1.write2file();
+          break;
+
+         case 2:
+         s1.readfromfile();
+         break;
+
+         case 3:
+         s1.readonerec();
+         break;
+
+         case 4:
+         exit(0);
+
+
+         default:
+         cout<<"invalid digit\n";
+         exit(0) 
+      }
+   }
 return 0;
 }
