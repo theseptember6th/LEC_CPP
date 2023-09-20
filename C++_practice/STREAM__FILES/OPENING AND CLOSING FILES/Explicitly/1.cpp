@@ -13,5 +13,6 @@ int main(){
     cin>>email;
     outfile<<name<<endl;
     outfile<<email;
+    outfile.close();
 return 0;
 }
