@@ -11,5 +11,6 @@ int main(){
    cout<<"INFOS IN FILE\n";
    cout<<name<<endl;
    cout<<email;
+   outfile.close();
 return 0;
 }
