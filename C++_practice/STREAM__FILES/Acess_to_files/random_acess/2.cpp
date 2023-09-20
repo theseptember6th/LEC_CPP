@@ -133,6 +133,7 @@ void student::modify(){//modify==replace an object with another object
         cout<<"\n error opening the file";
         exit(1);
     }
+    file.seekg(0,ios::beg);
     cout<<"\nenter the record you want to modify: ";
     int n;
     cin>>n;
@@ -150,6 +151,7 @@ void student::delet(){
     cin>>roll;
     student s[48];
     int i=0;
+    file.seekg(0,ios::beg);
     while(file.read((char*)&s[i],sizeof(s))){
         i++;
     }
