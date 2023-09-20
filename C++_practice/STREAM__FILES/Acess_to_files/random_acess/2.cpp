@@ -23,7 +23,7 @@ class student{
         cin>>marks;
     }
     void display(){
-       cout<<setw(10)<<name<<setw(5)<<roll<<setw(5)<<setprecision(3)<<"\n";
+       cout<<"\n"<<setw(10)<<name<<setw(5)<<roll<<setw(5)<<setprecision(3)<<marks<<"\n";
     }
     int getroll(){
         return roll;
