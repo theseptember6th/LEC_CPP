@@ -145,20 +145,22 @@ void student::modify(){//modify==replace an object with another object
 }
 void student::delet(){
     fstream file;
-    file.open("kristal.txt",ios::in|ios::out|ios::ate);
+    file.open("kristal.txt",ios::in);
     cout<<"\nenter the roll of student that you want to delete";
-    int roll;
-    cin>>roll;
+    int rollno;
+    cin>>rollno;
     student s[48];
     int i=0;
     file.seekg(0,ios::beg);
     while(file.read((char*)&s[i],sizeof(s))){
         i++;
     }
+    file.close();
+    file.open("kristal.txt",ios::out|ios::trunc);
     int count=i;
     for(i=0;i<count;i++){
-        if(s[i].getroll()!=roll){
-            file.write((char*)&s[i],sizeof(s));
+        if(s[i].getroll()!=rollno){
+            file.write((char*)&s[i],sizeof(s[i]));
         }
     }
    file.close();
@@ -168,8 +170,7 @@ int main(){
     student s;
     while(true){
         int choice;
-        cout<<"\n enter choice\n";
-        cin>>choice;
+       
 
         cout<<"\n PRESS 1 to write records to file ";
         cout<<"\n PRESS 2 to read records from file ";
@@ -179,6 +180,9 @@ int main(){
         cout<<"\n PRESS 6 to modify record from the file ";
         cout<<"\n PRESS 7 to delete record from file ";
         cout<<"\n PRESS 8 to exit ";
+
+         cout<<"\n enter choice\n";
+         cin>>choice;
 
         switch(choice){
             case 1:
