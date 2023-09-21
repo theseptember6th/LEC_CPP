@@ -134,13 +134,25 @@ void student::modify(){//modify==replace an object with another object
         exit(1);
     }
     file.seekg(0,ios::beg);
-    cout<<"\nenter the record you want to modify: ";
-    int n;
-    cin>>n;
-    file.seekg((n-1)*sizeof(s),ios::beg);
-    file.read((char*)&s,sizeof(s));
-    s.input();
-   file.write((char*)&s,sizeof(s));
+    cout<<"\nenter the roll no you want to modify: ";
+    int rollno;
+    cin>>rollno;
+    int isfound=0;
+    int object=0;
+    while(file.read((char*)&s,sizeof(s))){
+        ++object;
+        if(s.getroll()==rollno){
+            isfound=1;
+            file.seekg((object-1)*sizeof(s),ios::beg);
+            s.input();
+            file.write((char*)&s,sizeof(s));
+            break;
+        }
+    }
+    if(isfound==0){
+        cout<<"\n search not found";
+    }
+    
     file.close();
 }
 void student::delet(){
