@@ -155,27 +155,48 @@ void student::modify(){//modify==replace an object with another object
     
     file.close();
 }
-void student::delet(){
+void student::delet() {
     fstream file;
-    file.open("kristal.txt",ios::in);
-    cout<<"\nenter the roll of student that you want to delete";
-    int rollno;
-    cin>>rollno;
-    student s[48];
-    int i=0;
-    file.seekg(0,ios::beg);
-    while(file.read((char*)&s[i],sizeof(s))){
-        i++;
+    file.open("kristal.txt", ios::in|ios::binary);
+    if (file.fail()) {
+        cout << "Error opening the file" << endl;
+        exit(1);
     }
+
+    cout << "Enter the roll of the student that you want to delete: ";
+    int rollno;
+    cin >> rollno;
+
+    student s[48];
+    file.seekg(0, ios::beg);
+    int i = 0;
+    while (file.read((char*)&s[i], sizeof(s[0]))) {
+        ++i;
+    }
+
+    file.seekg(0, ios::end);
+    int x = file.tellg();
+    cout << "File size: " << x << " bytes" << endl;
+
+    int count = x / sizeof(s[0]);
+    cout << "Number of records in the file: " << count << endl;
+
     file.close();
-    file.open("kristal.txt",ios::out|ios::trunc);
-    int count=i;
-    for(i=0;i<count;i++){
-        if(s[i].getroll()!=rollno){
-            file.write((char*)&s[i],sizeof(s[i]));
+
+    file.open("kristal.txt", ios::out | ios::trunc|ios::binary);
+    if (file.fail()) {
+        cout << "Error opening the file for writing" << endl;
+        exit(1);
+    }
+
+    file.seekp(0, ios::beg);
+    for (i = 0; i < count; i++) {
+        if (s[i].getroll() != rollno) {
+            file.write((char*)&s[i], sizeof(s[0]));
         }
     }
-   file.close();
+
+    file.close();
 }
 
 int main(){

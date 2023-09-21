@@ -22,6 +22,7 @@ int main(){
   display(1);//calls display(T a)
   display(3,2);//calls display(T a ,int x)
   display("KRISTAL",3);//calls display (T a,int x)
-  display(3.6,1);//calls display(T1 a,T2 b)
+  display(3.6,1);//calls display(T a,int x)
+  display("Kristal",3.5);//calls display(Ta ,Tb)
 return 0;
 }
